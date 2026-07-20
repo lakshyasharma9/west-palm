@@ -187,10 +187,6 @@ function LoginPage() {
                     {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : "Sign in"}
                   </Button>
                 </form>
-
-                <div className="mt-6 rounded-md bg-muted/60 p-3 text-xs text-muted-foreground">
-                  <span className="font-medium text-foreground">Demo:</span> admin@wpcs.com / wpcs@2024
-                </div>
               </TabsContent>
 
               <TabsContent value="customer">
