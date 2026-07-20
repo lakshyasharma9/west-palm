@@ -1,0 +1,11 @@
+{
+  "name": "queries-delete-lambda",
+  "version": "1.0.0",
+  "description": "Lambda function for deleting a query",
+  "main": "index.js",
+  "dependencies": {
+    "aws-sdk": "^2.1691.0",
+    "jsonwebtoken": "^9.0.2",
+    "dotenv": "^16.4.5"
+  }
+}

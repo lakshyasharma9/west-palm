@@ -1,0 +1,11 @@
+Model Information:
+* title:	agile_embassy_garden
+* source:	https://sketchfab.com/3d-models/agile-embassy-garden-3b00393b950c4af8b9578f26b0981e3c
+* author:	teacherap123 (https://sketchfab.com/teacherap123)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "agile_embassy_garden" (https://sketchfab.com/3d-models/agile-embassy-garden-3b00393b950c4af8b9578f26b0981e3c) by teacherap123 (https://sketchfab.com/teacherap123) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,9 @@
+{
+  "name": "customer-account-create",
+  "version": "1.0.0",
+  "description": "Lambda function to create customer accounts",
+  "main": "index.js",
+  "dependencies": {
+    "uuid": "^9.0.0"
+  }
+}

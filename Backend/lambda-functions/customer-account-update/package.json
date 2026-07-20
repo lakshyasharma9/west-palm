@@ -1,0 +1,8 @@
+{
+  "name": "customer-account-update",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3"
+  }
+}

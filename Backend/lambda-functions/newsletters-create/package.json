@@ -1,0 +1,9 @@
+{
+  "name": "newsletters-create",
+  "version": "1.0.0",
+  "description": "Lambda function to create newsletters",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}

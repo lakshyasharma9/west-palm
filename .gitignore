@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment files (NEVER commit secrets)
+.env
+.env.local
+Backend/.env
+
+# Build outputs
+Frontend/.next/
+Frontend/out/
+wpcs-admin-panel/dist/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Misc
+*.zip
+*.swp
+*.swo
