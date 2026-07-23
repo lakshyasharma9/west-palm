@@ -2,8 +2,8 @@ module.exports = {
   apps: [
     {
       name: 'wpcs-backend',
-      script: './Backend/server.js',
-      cwd: '/home/ubuntu/west-palm',
+      script: 'server.js',
+      cwd: '/home/ubuntu/west-palm/Backend',
       env: {
         NODE_ENV: 'production',
         PORT: 3001

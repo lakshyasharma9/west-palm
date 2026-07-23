@@ -205,9 +205,9 @@ export default function ContactPage() {
                      <div>
                         <h4 className="text-xs font-bold uppercase tracking-widest text-[#D4AF37]" style={{ marginBottom: '12px' }}>Our Office</h4>
                         <p className="text-[#1E293B] font-medium leading-relaxed text-sm md:text-base">
-                          West Palm Beach Headquarters<br />
-                          1200 Lakeview Avenue, Suite 400<br />
-                          West Palm Beach, FL 33401
+                          95 Gangasagar B, Sagar Path,<br />
+                          Vaishali Nagar, Jaipur,<br />
+                          Rajasthan - 302021
                         </p>
                      </div>
                   </div>
@@ -218,8 +218,7 @@ export default function ContactPage() {
                      </div>
                      <div>
                         <h4 className="text-xs font-bold uppercase tracking-widest text-[#D4AF37]" style={{ marginBottom: '12px' }}>Call Us</h4>
-                        <p className="text-[#1E293B] font-medium text-sm md:text-base" style={{ marginBottom: '6px' }}>+1 (561) 555-0123</p>
-                        <p className="text-xs md:text-sm text-[#475569]">Mon - Fri, 8am - 6pm EST</p>
+                        <p className="text-[#1E293B] font-medium text-sm md:text-base" style={{ marginBottom: '6px' }}>+1 561 898 2510 & +1 (352) 745-5636</p>
                      </div>
                   </div>
 
@@ -229,8 +228,7 @@ export default function ContactPage() {
                      </div>
                      <div>
                         <h4 className="text-xs font-bold uppercase tracking-widest text-[#D4AF37]" style={{ marginBottom: '12px' }}>Email</h4>
-                        <p className="text-[#1E293B] font-medium underline text-sm md:text-base" style={{ marginBottom: '6px' }}>projects@wpcs.com</p>
-                        <p className="text-xs md:text-sm text-[#475569]">Typically response within 2 hours</p>
+                        <p className="text-[#1E293B] font-medium underline text-sm md:text-base" style={{ marginBottom: '6px' }}>sales@westpalmcs.com & kvijay@westpalmcs.com</p>
                      </div>
                   </div>
                </div>

@@ -14,8 +14,8 @@ import { getNews } from "@/lib/api";
 const values = [
   { title: "Precision & Accuracy", desc: "We focus on coordinated, clash-free models that support reliable installation.", icon: Zap },
   { title: "Collaborative Spirit", desc: "We work as an extension of your own team, ensuring seamless communication.", icon: Users },
-  { title: "Forward Thinking", desc: "Always exploring the latest in AI, XR, and generative design for AEC.", icon: Rocket },
-  { title: "Global Reach", desc: "Headquartered in West Palm Beach, serving projects worldwide.", icon: Building2 },
+  { title: "Forward Thinking", desc: "Driving innovation through intelligent BIM workflows", icon: Rocket },
+  { title: "Global Reach", desc: "Remote BIM support with global project experience.", icon: Building2 },
 ];
 
 const events = [
@@ -356,7 +356,7 @@ export default function AboutPage() {
         <div className="section-container">
           <div className="flex flex-col items-center opacity-0 translate-y-10 transition-all duration-1000" ref={addToRefs} style={{ marginBottom: "clamp(60px, 10vh, 100px)" }}>
             <h2 className="font-bold font-[family-name:var(--font-heading)] text-white text-center w-full" style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", marginBottom: "clamp(20px, 4vh, 32px)", lineHeight: 1.1 }}>
-              <span className="text-white">Our</span> <span className="text-[#D4AF37]">Experts</span>
+              <span className="text-white">Core</span> <span className="text-[#D4AF37]">Team</span>
             </h2>
           </div>
 
