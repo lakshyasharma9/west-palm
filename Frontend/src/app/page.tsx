@@ -381,9 +381,9 @@ export default function HomePage() {
       <section className="relative bg-[#C1E1C1] overflow-hidden" style={{ paddingTop: "80px", paddingBottom: "80px" }}>
         <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-[rgba(20,99,33,0.03)] to-transparent" />
 
-        <div className="section-container relative z-10">
+        <div className="section-container relative z-10 overflow-hidden">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div>
+            <div className="overflow-hidden">
               <span
                 className="inline-block text-xs font-bold text-[#146321] tracking-[0.18em] uppercase"
                 style={{ marginBottom: "16px" }}
@@ -392,14 +392,14 @@ export default function HomePage() {
               </span>
               <h2
                 className="font-bold font-[family-name:var(--font-heading)] text-[#1E293B]"
-                style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", lineHeight: 1.15, letterSpacing: "-0.02em", marginBottom: "20px" }}
+                style={{ fontSize: "clamp(1.75rem, 3.5vw, 3rem)", lineHeight: 1.15, letterSpacing: "-0.02em", marginBottom: "20px" }}
               >
-                Why Industry Leaders <br />
+                Why Industry Leaders <br className="hidden sm:block" />
                 <span className="text-[#146321]">Choose Us!</span>
               </h2>
               <p
                 className="text-[#475569]"
-                style={{ fontSize: "1.0625rem", lineHeight: 1.75, marginBottom: "32px" }}
+                style={{ fontSize: "clamp(0.9rem, 2.5vw, 1.0625rem)", lineHeight: 1.75, marginBottom: "32px" }}
               >
                 West Palm Consultants acts as an extension of your team, delivering coordinated BIM models that improve constructability and reduce project risk. We collaborate across disciplines, resolve clashes early, and provide accurate, construction-ready shop drawings.
               </p>
@@ -442,7 +442,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="relative flex items-center justify-center" style={{ minHeight: "520px" }}>
+            <div className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "clamp(300px, 50vw, 520px)" }}>
               <LaptopMockup />
             </div>
           </div>

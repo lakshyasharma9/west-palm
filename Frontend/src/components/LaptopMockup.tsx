@@ -64,7 +64,7 @@ export default function LaptopMockup() {
   return (
     <div 
       ref={containerRef}
-      className="relative flex items-center justify-center w-full h-full min-h-[520px]"
+      className="relative flex items-center justify-center w-full h-full min-h-[320px] sm:min-h-[520px] overflow-hidden"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -95,7 +95,7 @@ export default function LaptopMockup() {
           {/* Monitor Frame */}
           <div className="relative">
             {/* Screen Bezel with ultra-thin bezels + premium border */}
-            <div className="relative w-[480px] h-[300px] bg-gradient-to-br from-[#1a1a1a] via-[#0f0f0f] to-[#0a0a0a] rounded-t-[10px] shadow-[0_40px_120px_rgba(0,0,0,0.25)] border-2 border-[#2a2a2a]/50 overflow-hidden">
+            <div className="relative w-[90vw] max-w-[480px] h-[56vw] max-h-[300px] bg-gradient-to-br from-[#1a1a1a] via-[#0f0f0f] to-[#0a0a0a] rounded-t-[10px] shadow-[0_40px_120px_rgba(0,0,0,0.25)] border-2 border-[#2a2a2a]/50 overflow-hidden">
               {/* Inner border highlight */}
               <div className="absolute inset-0 rounded-t-[10px] border border-white/5 pointer-events-none" />
               
@@ -150,7 +150,7 @@ export default function LaptopMockup() {
             </div>
 
             {/* Bottom Chin - Enhanced */}
-            <div className="relative w-[480px] h-8 bg-gradient-to-b from-[#2a2a2a] via-[#1f1f1f] to-[#1a1a1a] rounded-b-[10px] shadow-[0_20px_60px_rgba(0,0,0,0.2)] border-x-2 border-b-2 border-[#2a2a2a]/50 overflow-hidden">
+            <div className="relative w-[90vw] max-w-[480px] h-8 bg-gradient-to-b from-[#2a2a2a] via-[#1f1f1f] to-[#1a1a1a] rounded-b-[10px] shadow-[0_20px_60px_rgba(0,0,0,0.2)] border-x-2 border-b-2 border-[#2a2a2a]/50 overflow-hidden">
               {/* Inner border highlight */}
               <div className="absolute inset-0 rounded-b-[10px] border border-white/5 pointer-events-none" />
               

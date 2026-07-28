@@ -27,16 +27,16 @@ const ClientsCarousel = () => {
   ];
 
   return (
-    <section style={{ backgroundColor: '#F8FAF8', paddingTop: '80px', paddingBottom: '40px', marginTop: '60px', marginBottom: '40px' }}>
-      <div style={{ maxWidth: '1400px', margin: '0 auto', paddingLeft: '80px', paddingRight: '80px' }}>
-        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', gap: '80px' }}>
+    <section style={{ backgroundColor: '#F8FAF8', paddingTop: '80px', paddingBottom: '40px', marginTop: '60px', marginBottom: '40px', overflow: 'hidden' }}>
+      <div style={{ maxWidth: '1400px', margin: '0 auto', paddingLeft: 'clamp(20px, 5vw, 80px)', paddingRight: 'clamp(20px, 5vw, 80px)' }}>
+        <div className="flex flex-col md:flex-row items-start" style={{ gap: 'clamp(32px, 6vw, 80px)' }}>
           
           {/* Left Side - Title */}
-          <div style={{ flexShrink: 0, width: '350px' }}>
+          <div className="flex-shrink-0 w-full md:w-[350px]">
             <h2 
               style={{ 
                 fontFamily: 'var(--font-heading)',
-                fontSize: '70px',
+                fontSize: 'clamp(40px, 10vw, 70px)',
                 fontWeight: 500,
                 lineHeight: 0.9,
                 color: '#0d1f0d',
