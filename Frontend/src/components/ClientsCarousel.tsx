@@ -29,24 +29,23 @@ const ClientsCarousel = () => {
   return (
     <section style={{ backgroundColor: '#F8FAF8', paddingTop: '80px', paddingBottom: '40px', marginTop: '60px', marginBottom: '40px', overflow: 'hidden' }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto', paddingLeft: 'clamp(20px, 5vw, 80px)', paddingRight: 'clamp(20px, 5vw, 80px)' }}>
-        <div className="flex flex-col md:flex-row items-start" style={{ gap: 'clamp(32px, 6vw, 80px)' }}>
+        <div className="flex flex-col md:flex-row items-center md:items-start" style={{ gap: 'clamp(32px, 6vw, 80px)' }}>
           
           {/* Left Side - Title */}
-          <div className="flex-shrink-0 w-full md:w-[350px]">
+          <div className="flex-shrink-0 w-full md:w-[350px] text-center md:text-left">
             <h2 
               style={{ 
                 fontFamily: 'var(--font-heading)',
-                fontSize: 'clamp(40px, 10vw, 70px)',
+                fontSize: 'clamp(36px, 10vw, 70px)',
                 fontWeight: 500,
                 lineHeight: 0.9,
                 color: '#0d1f0d',
-                marginBottom: '48px',
+                marginBottom: '24px',
                 textTransform: 'uppercase',
                 letterSpacing: '2px'
               }}
             >
-              TRUSTED<br />
-              BY
+              TRUSTED BY
             </h2>
             <p style={{ 
               fontSize: '14px',
@@ -56,8 +55,7 @@ const ClientsCarousel = () => {
               textTransform: 'uppercase',
               lineHeight: 1.4
             }}>
-              INDUSTRY<br />
-              LEADERS
+              INDUSTRY LEADERS
             </p>
           </div>
 

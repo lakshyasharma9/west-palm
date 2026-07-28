@@ -64,24 +64,21 @@ export default function LaptopMockup() {
   return (
     <div 
       ref={containerRef}
-      className="relative flex items-center justify-center w-full h-full min-h-[320px] sm:min-h-[520px] overflow-hidden"
+      className="relative flex items-center justify-center w-full h-full min-h-[280px] sm:min-h-[420px] lg:min-h-[520px] overflow-hidden"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
       {/* Ambient Glow Background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[500px] h-[500px] bg-gradient-to-br from-emerald-200/30 via-blue-200/20 to-transparent rounded-full blur-3xl" />
+        <div className="w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-gradient-to-br from-emerald-200/20 via-transparent to-transparent rounded-full blur-3xl" />
       </div>
 
       {/* Monitor Container with 3D Transform + Parallax */}
       <div
-        className="relative z-10 transition-all duration-300 ease-out"
+        className="relative z-10 transition-all duration-300 ease-out w-full flex items-center justify-center"
         style={{
           perspective: '1400px',
           transformStyle: 'preserve-3d',
-          transform: isHovered 
-            ? `scale(1.02) rotateX(${2 + parallaxRotateX}deg) rotateY(${-3 + parallaxRotateY}deg) translateX(${parallaxTranslateX}px) translateY(${-8 + parallaxTranslateY}px)` 
-            : `scale(1) rotateX(${5 + parallaxRotateX}deg) rotateY(${-5 + parallaxRotateY}deg) translateX(${parallaxTranslateX}px) translateY(${parallaxTranslateY}px)`
         }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
@@ -89,13 +86,14 @@ export default function LaptopMockup() {
         <div
           className="relative animate-float"
           style={{
-            transformStyle: 'preserve-3d'
+            transformStyle: 'preserve-3d',
+            transform: `scale(${isHovered ? 1.02 : 1})`,
           }}
         >
           {/* Monitor Frame */}
           <div className="relative">
             {/* Screen Bezel with ultra-thin bezels + premium border */}
-            <div className="relative w-[90vw] max-w-[480px] h-[56vw] max-h-[300px] bg-gradient-to-br from-[#1a1a1a] via-[#0f0f0f] to-[#0a0a0a] rounded-t-[10px] shadow-[0_40px_120px_rgba(0,0,0,0.25)] border-2 border-[#2a2a2a]/50 overflow-hidden">
+            <div className="relative w-[85vw] sm:w-[400px] lg:w-[480px] aspect-[16/10] bg-gradient-to-br from-[#1a1a1a] via-[#0f0f0f] to-[#0a0a0a] rounded-t-[10px] shadow-[0_40px_120px_rgba(0,0,0,0.25)] border-2 border-[#2a2a2a]/50 overflow-hidden">
               {/* Inner border highlight */}
               <div className="absolute inset-0 rounded-t-[10px] border border-white/5 pointer-events-none" />
               
@@ -103,7 +101,7 @@ export default function LaptopMockup() {
               <div className="absolute -inset-[1px] rounded-t-[10px] bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-30 pointer-events-none" />
               
               {/* Screen Content */}
-              <div className="absolute inset-[6px] top-[6px] bottom-0 left-[6px] right-[6px] bg-black rounded-t-[6px] overflow-hidden ring-1 ring-white/5">
+              <div className="absolute inset-[6px] top-[6px] bottom-0 left-[6px] right-[6px] bg-[#0a0f1a] rounded-t-[6px] overflow-hidden ring-1 ring-white/5">
                 {isVisible ? (
                   <>
                     {!videoLoaded && (
@@ -139,18 +137,18 @@ export default function LaptopMockup() {
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-black/10 pointer-events-none" />
               </div>
 
-              {/* 3D Side Edge Effect - Enhanced */}
-              <div className="absolute top-0 -right-2 w-2 h-full bg-gradient-to-r from-[#2a2a2a] via-[#1f1f1f] to-[#1a1a1a] shadow-lg" style={{ clipPath: 'polygon(0 0, 100% 2%, 100% 100%, 0 100%)' }} />
+              {/* 3D Side Edge Effect - Enhanced (hidden on mobile) */}
+              <div className="absolute top-0 -right-2 w-2 h-full bg-gradient-to-r from-[#2a2a2a] via-[#1f1f1f] to-[#1a1a1a] shadow-lg hidden sm:block" style={{ clipPath: 'polygon(0 0, 100% 2%, 100% 100%, 0 100%)' }} />
               
-              {/* 3D Top Edge Effect - Enhanced */}
-              <div className="absolute -top-1.5 left-0 right-0 h-1.5 bg-gradient-to-b from-[#3a3a3a] via-[#2f2f2f] to-[#2a2a2a] rounded-t-[10px] shadow-md" />
+              {/* 3D Top Edge Effect - Enhanced (hidden on mobile) */}
+              <div className="absolute -top-1.5 left-0 right-0 h-1.5 bg-gradient-to-b from-[#3a3a3a] via-[#2f2f2f] to-[#2a2a2a] rounded-t-[10px] shadow-md hidden sm:block" />
               
               {/* Bottom edge highlight */}
               <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
             </div>
 
             {/* Bottom Chin - Enhanced */}
-            <div className="relative w-[90vw] max-w-[480px] h-8 bg-gradient-to-b from-[#2a2a2a] via-[#1f1f1f] to-[#1a1a1a] rounded-b-[10px] shadow-[0_20px_60px_rgba(0,0,0,0.2)] border-x-2 border-b-2 border-[#2a2a2a]/50 overflow-hidden">
+            <div className="relative w-[85vw] sm:w-[400px] lg:w-[480px] h-8 bg-gradient-to-b from-[#2a2a2a] via-[#1f1f1f] to-[#1a1a1a] rounded-b-[10px] shadow-[0_20px_60px_rgba(0,0,0,0.2)] border-x-2 border-b-2 border-[#2a2a2a]/50 overflow-hidden">
               {/* Inner border highlight */}
               <div className="absolute inset-0 rounded-b-[10px] border border-white/5 pointer-events-none" />
               
@@ -162,14 +160,14 @@ export default function LaptopMockup() {
               </div>
             </div>
 
-            {/* Stand Neck - Enhanced */}
-            <div className="absolute left-1/2 -translate-x-1/2 top-full w-14 h-12 bg-gradient-to-r from-[#3a3a3a] via-[#2a2a2a] to-[#3a3a3a] shadow-lg border-x border-white/5">
+            {/* Stand Neck - Enhanced (hidden on mobile) */}
+            <div className="absolute left-1/2 -translate-x-1/2 top-full w-14 h-12 bg-gradient-to-r from-[#3a3a3a] via-[#2a2a2a] to-[#3a3a3a] shadow-lg border-x border-white/5 hidden sm:block">
               <div className="absolute left-0.5 top-0 w-0.5 h-full bg-gradient-to-b from-white/10 to-transparent" />
               <div className="absolute right-0.5 top-0 w-0.5 h-full bg-gradient-to-b from-black/30 to-transparent" />
             </div>
 
-            {/* Stand Base - Enhanced */}
-            <div className="absolute left-1/2 -translate-x-1/2 top-[calc(100%+3rem)] w-52 h-14 flex flex-col">
+            {/* Stand Base - Enhanced (hidden on mobile) */}
+            <div className="absolute left-1/2 -translate-x-1/2 top-[calc(100%+3rem)] w-52 h-14 flex-col hidden sm:flex">
               {/* Base Front */}
               <div className="w-full h-4 bg-gradient-to-b from-[#2a2a2a] via-[#1f1f1f] to-[#1a1a1a] rounded-t shadow-lg relative border-t border-white/5">
                 <div className="absolute top-0.5 left-[10%] right-[10%] h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
@@ -183,8 +181,8 @@ export default function LaptopMockup() {
             </div>
           </div>
 
-          {/* Ground Shadow */}
-          <div className="absolute left-1/2 -translate-x-1/2 -bottom-8 w-80 h-8 bg-gradient-radial from-black/20 via-black/10 to-transparent rounded-full blur-xl" />
+          {/* Ground Shadow (hidden on mobile) */}
+          <div className="absolute left-1/2 -translate-x-1/2 -bottom-8 w-80 h-8 bg-gradient-radial from-black/20 via-black/10 to-transparent rounded-full blur-xl hidden sm:block" />
         </div>
       </div>
 

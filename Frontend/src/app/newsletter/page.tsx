@@ -26,7 +26,7 @@ export default async function NewsletterPage() {
     <>
       <style>{`
         /* ─── Page ─── */
-        .nlp-page { min-height:100vh; background:#f5f8f5; }
+        .nlp-page { min-height:100vh; background:#f5f8f5; padding-top:clamp(100px, 14vh, 140px); }
 
         /* ─── Two-column grid ─── */
         .nlp-wrap {
