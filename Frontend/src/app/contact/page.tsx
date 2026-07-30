@@ -13,7 +13,6 @@ import {
   Building,
   CheckCircle,
   Linkedin,
-  Twitter,
   Instagram,
   Youtube
 } from "lucide-react";
@@ -239,14 +238,11 @@ export default function ContactPage() {
                     <a href="https://www.linkedin.com/company/89331237/admin/dashboard/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full flex items-center justify-center text-[#1E293B] bg-white/70 backdrop-blur-sm border border-[rgba(20,99,33,0.2)] hover:!bg-[#146321] hover:!text-white transition-all duration-300 hover:scale-110">
                       <Linkedin size={22} />
                     </a>
-                    <a href="#" className="w-14 h-14 rounded-full flex items-center justify-center text-[#1E293B] bg-white/70 backdrop-blur-sm border border-[rgba(20,99,33,0.2)] hover:!bg-[#146321] hover:!text-white transition-all duration-300 hover:scale-110">
-                      <Twitter size={22} />
-                    </a>
-                    <a href="#" className="w-14 h-14 rounded-full flex items-center justify-center text-[#1E293B] bg-white/70 backdrop-blur-sm border border-[rgba(20,99,33,0.2)] hover:!bg-[#146321] hover:!text-white transition-all duration-300 hover:scale-110">
-                      <Instagram size={22} />
-                    </a>
-                    <a href="https://www.youtube.com/@WestPalmConsultants" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full flex items-center justify-center text-[#1E293B] bg-white/70 backdrop-blur-sm border border-[rgba(20,99,33,0.2)] hover:!bg-[#146321] hover:!text-white transition-all duration-300 hover:scale-110">
+                    <a href="https://m.youtube.com/@WestPalmConsultants" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full flex items-center justify-center text-[#1E293B] bg-white/70 backdrop-blur-sm border border-[rgba(20,99,33,0.2)] hover:!bg-[#146321] hover:!text-white transition-all duration-300 hover:scale-110">
                       <Youtube size={22} />
+                    </a>
+                    <a href="https://www.instagram.com/westpalm_consultants?igsh=MTN1cnNqdGp5MmppNQ==" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full flex items-center justify-center text-[#1E293B] bg-white/70 backdrop-blur-sm border border-[rgba(20,99,33,0.2)] hover:!bg-[#146321] hover:!text-white transition-all duration-300 hover:scale-110">
+                      <Instagram size={22} />
                     </a>
                  </div>
                </div>

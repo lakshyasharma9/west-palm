@@ -22,9 +22,9 @@ export const contactInfo = {
 };
 
 export const socialLinks = [
-  { name: "LinkedIn", url: "#" },
-  { name: "Twitter", url: "#" },
-  { name: "Instagram", url: "#" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/company/89331237/admin/dashboard/" },
+  { name: "YouTube", url: "https://m.youtube.com/@WestPalmConsultants" },
+  { name: "Instagram", url: "https://www.instagram.com/westpalm_consultants?igsh=MTN1cnNqdGp5MmppNQ==" },
 ];
 
 export const footerText = {

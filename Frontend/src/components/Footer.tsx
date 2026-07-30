@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   MapPin, Phone, Mail,
-  Linkedin, Twitter, Instagram, ArrowUpRight,
+  Linkedin, Youtube, Instagram, ArrowUpRight,
 } from "lucide-react";
 import { footerLinks, contactInfo, socialLinks, footerText } from "@/constants/footer";
 import { iconBoxStyle } from "@/constants/styles";
@@ -94,7 +94,7 @@ export default function Footer() {
               {footerText.description}
             </p>
             <div style={{ display: "flex", gap: "10px" }}>
-              {[Linkedin, Twitter, Instagram].map((Icon, i) => (
+              {[Linkedin, Youtube, Instagram].map((Icon, i) => (
                 <a key={i} href={socialLinks[i].url} style={{
                   width: "36px", height: "36px", borderRadius: "8px",
                   border: "1px solid rgba(255,255,255,0.15)",
