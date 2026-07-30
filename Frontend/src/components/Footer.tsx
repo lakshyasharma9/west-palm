@@ -200,6 +200,23 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Design credit */}
+        <div style={{
+          borderTop: "1px solid rgba(255,255,255,0.05)",
+          padding: "16px 0 20px",
+          display: "flex", alignItems: "center", justifyContent: "center", gap: "8px",
+          fontSize: "0.7rem", color: "rgba(255,255,255,0.3)",
+        }}>
+          <a href="https://tech4brand.com" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", textDecoration: "none", color: "rgba(255,255,255,0.4)", transition: "color 0.2s" }}
+            onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.8)"}
+            onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.4)"}
+          >
+            <span>Design & Developed by</span>
+            <Image src="/Profile.png" alt="Tech4Brand" width={18} height={18} style={{ borderRadius: "4px" }} />
+            <span style={{ fontWeight: 600 }}>Tech4Brand</span>
+          </a>
+        </div>
+
       </div>
     </footer>
   );
