@@ -61,14 +61,18 @@ const ClientsCarousel = () => {
 
           {/* Right Side - Carousel */}
           <div style={{ flex: 1, width: '100%', overflow: 'hidden' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               
               {/* Top Row - Left to Right */}
-              <div style={{ height: '100px' }}>
+              <div className="h-[80px] sm:h-[100px]">
                 <Swiper
                   modules={[Autoplay]}
-                  slidesPerView={4}
-                  spaceBetween={24}
+                  slidesPerView={3}
+                  spaceBetween={12}
+                  breakpoints={{
+                    480: { slidesPerView: 3, spaceBetween: 16 },
+                    768: { slidesPerView: 4, spaceBetween: 24 },
+                  }}
                   loop={true}
                   autoplay={{
                     delay: 0,
@@ -82,11 +86,11 @@ const ClientsCarousel = () => {
                       <div style={{
                         backgroundColor: 'white',
                         borderRadius: '8px',
-                        padding: '16px',
+                        padding: '12px',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        height: '100px',
+                        height: '100%',
                         boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
                         transition: 'all 0.3s ease',
                       }}
@@ -116,11 +120,15 @@ const ClientsCarousel = () => {
               </div>
 
               {/* Bottom Row - Right to Left */}
-              <div style={{ height: '100px' }}>
+              <div className="h-[80px] sm:h-[100px]">
                 <Swiper
                   modules={[Autoplay]}
-                  slidesPerView={4}
-                  spaceBetween={24}
+                  slidesPerView={3}
+                  spaceBetween={12}
+                  breakpoints={{
+                    480: { slidesPerView: 3, spaceBetween: 16 },
+                    768: { slidesPerView: 4, spaceBetween: 24 },
+                  }}
                   loop={true}
                   autoplay={{
                     delay: 0,
@@ -135,11 +143,11 @@ const ClientsCarousel = () => {
                       <div style={{
                         backgroundColor: 'white',
                         borderRadius: '8px',
-                        padding: '16px',
+                        padding: '12px',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        height: '100px',
+                        height: '100%',
                         boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
                         transition: 'all 0.3s ease',
                       }}
