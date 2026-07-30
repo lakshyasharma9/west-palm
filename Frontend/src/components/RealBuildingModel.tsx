@@ -43,13 +43,10 @@ export default function RealBuildingModel() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Lazy preload - only after 1 second to prioritize critical content
+  // Load immediately - no artificial delay
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-      useGLTF.preload("/models/agile_embassy_garden/scene.gltf");
-    }, 1000);
-    return () => clearTimeout(timer);
+    setIsVisible(true);
+    useGLTF.preload("/models/agile_embassy_garden/scene.gltf");
   }, []);
 
   useEffect(() => {

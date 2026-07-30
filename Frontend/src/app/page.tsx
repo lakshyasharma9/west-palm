@@ -73,23 +73,9 @@ export default function HomePage() {
     });
   }, []);
 
-  // Lazy load 3D model with Intersection Observer
+  // Load 3D model immediately on mount (no lazy loading delay)
   useEffect(() => {
-    if (!heroRef.current) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setShouldLoadModel(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: '100px' }
-    );
-
-    observer.observe(heroRef.current);
-
-    return () => observer.disconnect();
+    setShouldLoadModel(true);
   }, []);
 
   // Memoize animation config
@@ -259,7 +245,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative h-[400px] sm:h-[480px] lg:h-[560px] translate-y-[30px] sm:translate-y-0" style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div className="relative h-[300px] sm:h-[400px] lg:h-[560px]" style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
             {shouldLoadModel ? (
               <div style={{ width: "100%", height: "100%", position: "relative", zIndex: 50 }}>
                 <BuildingModel />

@@ -24,7 +24,7 @@ export default function ConstructionLoader({ onComplete }: ConstructionLoaderPro
     const tl = gsap.timeline({
       onComplete: () => {
         gsap.to(overlayRef.current, {
-          yPercent: -100, duration: 1.2, ease: "power3.inOut",
+          yPercent: -100, duration: 0.8, ease: "power3.inOut",
           onComplete: () => {
             setVisible(false);
             if (onComplete) onComplete();
@@ -33,13 +33,11 @@ export default function ConstructionLoader({ onComplete }: ConstructionLoaderPro
       },
     });
 
-    // 3 blinks = 5 transitions
-    tl.to(logo, { opacity: 1, duration: 0.6, ease: "sine.inOut" })
-      .to(logo, { opacity: 0.2, duration: 0.6, ease: "sine.inOut" })
-      .to(logo, { opacity: 1, duration: 0.6, ease: "sine.inOut" })
-      .to(logo, { opacity: 0.2, duration: 0.6, ease: "sine.inOut" })
-      .to(logo, { opacity: 1, duration: 0.6, ease: "sine.inOut" })
-      .to({}, { duration: 0.4 });
+    // Quick 2-blink animation for production
+    tl.to(logo, { opacity: 1, duration: 0.4, ease: "sine.inOut" })
+      .to(logo, { opacity: 0.3, duration: 0.3, ease: "sine.inOut" })
+      .to(logo, { opacity: 1, duration: 0.4, ease: "sine.inOut" })
+      .to({}, { duration: 0.2 });
   }, [onComplete]);
 
   if (!visible) return null;
