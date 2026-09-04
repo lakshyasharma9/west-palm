@@ -6,7 +6,7 @@ import OptimizedImage from '@/components/OptimizedImage';
 import 'swiper/css';
 
 const ClientsCarousel = () => {
-  // First row logos (1-6)
+  // First row logos (1-6 + Picture1, Picture2, Picture3, Picture4)
   const topRowLogos = [
     '/Clients/1.jpg',
     '/Clients/2.jpg',
@@ -14,9 +14,13 @@ const ClientsCarousel = () => {
     '/Clients/4.jpg',
     '/Clients/5.jpg',
     '/Clients/6.jpg',
+    '/Clients/Picture1.jpg',
+    '/Clients/Picture2.png',
+    '/Clients/Picture3.png',
+    '/Clients/Picture4.jpg',
   ];
 
-  // Second row logos (7-12)
+  // Second row logos (7-12 + Picture5, Picture6, Picture7)
   const bottomRowLogos = [
     '/Clients/7.jpg',
     '/Clients/8.jpg',
@@ -24,6 +28,9 @@ const ClientsCarousel = () => {
     '/Clients/10.jpg',
     '/Clients/11.jpg',
     '/Clients/12.jpg',
+    '/Clients/Picture5.png',
+    '/Clients/Picture6.png',
+    '/Clients/Picture7.png',
   ];
 
   return (
