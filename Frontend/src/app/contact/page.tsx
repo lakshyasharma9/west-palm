@@ -204,9 +204,8 @@ export default function ContactPage() {
                      <div>
                         <h4 className="text-xs font-bold uppercase tracking-widest text-[#D4AF37]" style={{ marginBottom: '12px' }}>Our Office</h4>
                         <p className="text-[#1E293B] font-medium leading-relaxed text-sm md:text-base">
-                          95 Gangasagar B, Sagar Path,<br />
-                          Vaishali Nagar, Jaipur,<br />
-                          Rajasthan - 302021
+                          Vista Parkway, West Palm Beach,<br />
+                          FL 33411
                         </p>
                      </div>
                   </div>
