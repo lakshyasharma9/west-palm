@@ -16,7 +16,7 @@ export const footerLinks = {
 };
 
 export const contactInfo = {
-  address: "95 Gangasagar B, Sagar Path, Vaishali Nagar, Jaipur, Rajasthan - 302021",
+  address: "Vista Parkway, West Palm Beach, FL 33411",
   phone: "+1 561 898 2510 & +1 (352) 745-5636",
   email: "sales@westpalmcs.com & kvijay@westpalmcs.com",
 };
