@@ -147,7 +147,7 @@ function buildClientConfirmationHTML(data) {
               ${[
                 ['🔍', 'Review', 'Our team reviews your inquiry in detail.'],
                 ['📞', 'Contact', 'A specialist will reach out within 24 hours.'],
-                ['🚀', 'Kickoff', 'We'll tailor a solution for your project.']
+                ['🚀', 'Kickoff', "We'll tailor a solution for your project."]
               ].map(([icon, title, desc], i) => `
               <tr>
                 <td style="padding:10px 0;">
