@@ -1,6 +1,7 @@
 require('dotenv').config({ path: '../../.env' });
 const { createQuery } = require('../../shared/db-helper');
 const { uploadFile, validateFileType, validateFileSize } = require('../../shared/s3-helper');
+const { sendContactFormEmails } = require('../../shared/email-service');
 const {
   successResponse,
   errorResponse,
@@ -115,6 +116,11 @@ exports.handler = async (event) => {
     if (!result.success) {
       throw new Error('Failed to save query');
     }
+
+    // Send emails (non-blocking — don't fail the request if email fails)
+    sendContactFormEmails(queryData).catch(err => {
+      logError('Email Service', err);
+    });
 
     // Return success response
     return successResponse(
