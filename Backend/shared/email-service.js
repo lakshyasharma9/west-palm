@@ -2,7 +2,7 @@ const { Resend } = require('resend');
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const COMPANY_NAME = 'West Palm Construction Solutions';
+const COMPANY_NAME = 'West Palm Consultants';
 const COMPANY_EMAIL = 'noreply@westpalmcs.com';
 const ADMIN_EMAILS = ['sales@westpalmcs.com', 'kvijay@westpalmcs.com'];
 const LOGO_URL = 'https://westpalmcs.com/West_Palm_Logo-removebg-preview.png';
