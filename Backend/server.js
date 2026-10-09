@@ -52,11 +52,30 @@ const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors({
-  origin: '*',
-  credentials: false,
+  origin: function(origin, callback) {
+    const allowedOrigins = [
+      'https://westpalmcs.com',
+      'https://www.westpalmcs.com',
+      'https://admin.westpalmcs.com',
+      'http://localhost:3000',
+      'http://localhost:8080',
+      'http://localhost:3002'
+    ];
+    // Allow requests with no origin (server-to-server, curl, mobile)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    return callback(new Error('Not allowed by CORS'));
+  },
+  credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+  optionsSuccessStatus: 204
 }));
+
+// Handle preflight for all routes explicitly
+app.options('*', cors());
 // Reduced payload limits - use presigned URLs for large files
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
