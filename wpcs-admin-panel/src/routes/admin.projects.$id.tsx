@@ -52,7 +52,7 @@ const SHORT_LABEL: Record<string, string> = {
 
 function ProjectPreviewPage() {
   const { id } = Route.useParams();
-  const { projects, setProjects, refreshProjects } = useStore();
+  const { projects, refreshProjects } = useStore();
   const navigate = useNavigate();
   const existing = projects.find((p) => p.id === id);
   const [draft, setDraft] = useState<Project | null>(existing ?? null);
@@ -217,15 +217,14 @@ function ProjectPreviewPage() {
       const payload = JSON.parse(JSON.stringify(draft));
       const result = await api.updateProject(draft.id, payload);
       if (result.success) {
-        setProjects((prev) => prev.map((p) => (p.id === draft.id ? (result.project || draft) : p)));
         toast.success("Project saved successfully");
         setEditMode(null);
-        // React Query will automatically update cache
         refreshProjects();
       } else {
         toast.error(result.error || "Failed to save project");
       }
     } catch (error) {
+      console.error("Save error:", error);
       toast.error("Failed to save project");
     } finally {
       setSaving(false);
