@@ -213,9 +213,11 @@ function ProjectPreviewPage() {
     if (!draft) return;
     setSaving(true);
     try {
-      const result = await api.updateProject(draft.id, draft);
+      // Send only serializable fields — exclude any functions or non-serializable values
+      const payload = JSON.parse(JSON.stringify(draft));
+      const result = await api.updateProject(draft.id, payload);
       if (result.success) {
-        setProjects((prev) => prev.map((p) => (p.id === draft.id ? result.project : p)));
+        setProjects((prev) => prev.map((p) => (p.id === draft.id ? (result.project || draft) : p)));
         toast.success("Project saved successfully");
         setEditMode(null);
         // React Query will automatically update cache

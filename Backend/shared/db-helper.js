@@ -469,10 +469,14 @@ async function updateProject(id, projectData) {
       return { success: false, error: 'Project not found' };
     }
 
+    // Clean projectData — remove undefined values and non-serializable fields
+    const cleanData = JSON.parse(JSON.stringify(projectData));
+
     // Merge with existing data
     const mergedData = {
       ...currentResult.data,
-      ...projectData,
+      ...cleanData,
+      id, // ensure id is never overwritten
       updatedAt: new Date().toISOString()
     };
 
@@ -491,8 +495,7 @@ async function updateProject(id, projectData) {
     return { success: true, data: mergedData };
   } catch (error) {
     console.error('Error updating project:', error);
-    console.error('Project data:', JSON.stringify(projectData, null, 2));
-    throw error;
+    return { success: false, error: error.message || 'Failed to update project' };
   }
 }
 
