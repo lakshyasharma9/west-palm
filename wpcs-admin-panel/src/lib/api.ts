@@ -370,6 +370,28 @@ export async function updateProject(id: string, projectData: any) {
   }
 }
 
+export async function deleteProject(id: string) {
+  try {
+    const response = await fetch(`${API_BASE_URL}/projects/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${getToken()}`,
+      },
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      return { success: true };
+    } else {
+      return { success: false, error: data.message };
+    }
+  } catch (error) {
+    console.error('Delete project error:', error);
+    return { success: false, error: 'Failed to delete project' };
+  }
+}
+
 /**
  * Upload multiple files to S3
  */
