@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { Plus, Building2, MapPin, Trash2, ImagePlus, Edit, Upload } from "lucide-react";
 import { toast } from "sonner";
+import { useQueryClient } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -42,6 +43,7 @@ const TYPES: Project["type"][] = ["Residential", "Commercial", "Mixed-Use", "Ind
 
 function ProjectsPage() {
   const { projects, refreshProjects } = useStore();
+  const queryClient = useQueryClient();
   const [open, setOpen] = useState(false);
   const [confirmDelete, setConfirmDelete] = useState<string | null>(null);
   const [creating, setCreating] = useState(false);
@@ -179,9 +181,14 @@ function ProjectsPage() {
   const remove = async (id: string) => {
     const result = await api.deleteProject(id);
     if (result.success) {
+      // Immediately remove from React Query cache so UI updates instantly
+      queryClient.setQueryData(['projects'], (old: Project[] = []) =>
+        old.filter((p) => p.id !== id)
+      );
       toast.success("Project deleted");
-      refreshProjects(); // Invalidate cache
       setConfirmDelete(null);
+      // Also refetch in background to sync with server
+      refreshProjects();
     } else {
       toast.error("Failed to delete project");
     }
