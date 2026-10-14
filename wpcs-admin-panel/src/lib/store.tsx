@@ -56,8 +56,9 @@ function StoreProviderInner({ children }: { children: React.ReactNode }) {
       const result = await api.getProjects();
       return result.success ? result.projects : [];
     },
-    staleTime: 0, // Always fetch fresh data
-    gcTime: 0, // Don't cache
+    staleTime: 30 * 1000, // 30 seconds - prevent immediate refetch after setQueryData
+    gcTime: 5 * 60 * 1000, // 5 minutes cache
+    refetchOnWindowFocus: false,
   });
 
   const refreshQueries = async () => {

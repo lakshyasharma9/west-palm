@@ -187,8 +187,6 @@ function ProjectsPage() {
       );
       toast.success("Project deleted");
       setConfirmDelete(null);
-      // Also refetch in background to sync with server
-      refreshProjects();
     } else {
       toast.error("Failed to delete project");
     }
