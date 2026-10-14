@@ -51,7 +51,14 @@ exports.handler = async (event) => {
     let bannerUrl = null;
     let heroUrl = null;
 
-    if (body.bannerImage && body.bannerImage.data) {
+    // Accept pre-uploaded S3 key from frontend (presigned URL upload)
+    if (body.bannerUrl) {
+      bannerUrl = body.bannerUrl;
+      heroUrl = body.heroUrl || body.bannerUrl;
+    }
+
+    // Also handle base64 upload (legacy support)
+    if (!bannerUrl && body.bannerImage && body.bannerImage.data) {
       const fileBuffer = Buffer.from(body.bannerImage.data, 'base64');
       const fileName = body.bannerImage.name || 'banner.jpg';
       const fileType = body.bannerImage.type || 'image/jpeg';
